@@ -5,7 +5,7 @@ storage:
     label: "Create new PVC"
   useSharedStorage:
    __metadata:
-      name: "createPvc"
+      name: "createNewPvc"
       label: "Create a new PVC for this deployment."
       description: "If enabled a new PVC with the name specified will be created. Otherwise it will assume that one with teh given name is already created and will be used."
       type: "boolean"
