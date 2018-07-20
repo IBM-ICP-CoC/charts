@@ -1,4 +1,4 @@
-![gog](https://ibm-icp-coc.github.io/charts/repo/unstable/jenkins.png "GOG logo")
+![jenkins](https://ibm-icp-coc.github.io/charts/repo/stable/jenkins.png "Jenkins logo")
 # Jenkins for ICP
 
 Package Version: 1.0.0
