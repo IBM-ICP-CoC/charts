@@ -8,7 +8,7 @@ metadata:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: 1
   template:
     metadata:
       labels:
@@ -31,3 +31,18 @@ spec:
       - name: jenkins-home
         persistentVolumeClaim:
           claimName: {{ .Values.storage.pvc }}
+# {{ if .Values.storage.createPvc  }}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ .Values.storage.pvc }}
+  labels:
+    app: {{ template "name" . }}
+spec:
+  accessModes:
+    - {{ .Values.storage.accessMode }}
+  resources:
+    requests:
+      storage: {{ .Values.storage.size }} 
+# {{ end }}
