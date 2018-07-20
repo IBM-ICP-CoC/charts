@@ -6,6 +6,7 @@ service:
   name: jenkins-icp-svc
   type: NodePort
 storage:
+  createNewPvc: true
   pvc: jenkins-icp-pvc
   accessMode: ReadWriteOnce
   size: 5Gi

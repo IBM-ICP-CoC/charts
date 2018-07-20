@@ -1,1 +1,3 @@
-A Build engine, configured with plugins or deployment on icp
+A Build engine, configured with plugins to leverage Kubernetes cloud for dynamic worker agents.
+
+The default id/pass is `admin/admin`.
