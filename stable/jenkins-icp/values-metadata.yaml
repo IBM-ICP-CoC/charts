@@ -3,7 +3,7 @@
 storage:
   __metadata:
     label: "Create new PVC"
-  useSharedStorage:
+  createNewPvc:
    __metadata:
       name: "createNewPvc"
       label: "Create a new PVC for this deployment."
