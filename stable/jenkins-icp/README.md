@@ -1,29 +1,13 @@
 ![jenkins](https://ibm-icp-coc.github.io/charts/repo/stable/jenkins.png "Jenkins logo")
 # Jenkins for ICP
 
-Package Version: 1.0.0
+Package Version: 1.0.1
 
 A packaging of Jenkins for ICP by the IBM ICP Center of Competency (CoC).  This specific packaging includes all the plugins necessary to leverage the [Kubernetes](https://wiki.jenkins.io/display/JENKINS/Kubernetes+Plugin) cloud for dynamic provisioning of worker nodes to perform individual build tasks.
 
 This packaging also changes the default user to root (from Jenkins) which prevents any issues of accessing the shared file system.
 
 A default admin user os created with the credentials `admin/admin`.  You should change the admin password as soon as you can.
-
-Parameters
-
-```
-image:
-  repository: ibmicpcoc/jenkins-icp
-  tag: latest
-  pullPolicy: IfNotPresent
-service:
-  name: jenkins-icp-svc
-  type: NodePort
-storage:
-  pvc: jenkins-icp-pvc
-  accessMode: ReadWriteOnce
-  size: 5Gi
-```
   
 ## Configuration
 
