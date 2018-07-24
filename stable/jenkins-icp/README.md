@@ -20,7 +20,7 @@ The following tables lists the configurable parameters of the Jenkins chart and 
 | `image.pullPolilcy`        | The pull policy for images                              | `IfNotPresent`               |
 | `service.name`             | The name of the service resource                        | `jenkins-icp-service`        |
 | `service.type`             | The type of service                                     | `NodePort`                   |
-| `storage.createPvc`        | Enabled, indicates that a new PVC is created            | `enabled`                    |
+| `storage.createNewPvc`     | Enabled, indicates that a new PVC is created            | `true`                       |
 | `storage.pvc`              | The persistent volume claim name tp be created          | `jenkins-icp-pvc`            |
 | `storage.accessMode`       | The access mode for persistent storage volume           | `NodePort`                   |
 | `storage.size`             | The size of the persistent volume                       | `5Gi`                        |
