@@ -1,5 +1,5 @@
 ![KubeToy](https://ibm-icp-coc.github.io/charts/repo/stable/duck.png "KubeToy logo")
-# Kubetoy 1.5.1
+# Kubetoy 1.6.0
 
 A Kubernetes Toy Application
 
@@ -9,19 +9,57 @@ See the GitHub [documentation](https://github.com/IBM-ICP-CoC/KubeToy) for examp
 app.
 
 
-Versions 1.5.1 has updated UI, but no significant functionality changes.
+Versions 1.6.0 has new Network page to do DNS lookups and pings from.
 
 
 ## Configuration
 
-### Parameters
+The following tables lists the configurable parameters of the Jenkins chart and their default values.
 
-The only parameter of interest is related to the use of shared storage.  KubeToy can be used to experiment 
-with shared storage, however this feature is only useful if you have direct access to the persistent 
-volume that will be bound to this app's claim.  For example if the PV was a NFS share, you would want to 
-ssh into the NFS server host (or any client bound to that server) to explore the filesystem with 
-standard OS commands.  So the default is to not include this functionality with the deployment.  If you 
-do, however, then feel free to change the `storage.useSharedStorage` value to `true`.
+|         Parameter            |                       Description                       |           Default          |
+|------------------------------|---------------------------------------------------------|----------------------------|
+| `image.repository`         | The repository and image name                           | `ibmicpcoc/kubetoy`      |
+| `image.pullPolilcy`        | The pull policy for images                              | `IfNotPresent`            |
+| `service.name`              | The name of the service resource                        | `kubetoy-service`        |
+| `service.type`              | The type of service                                     | `NodePort`                |
+| `storage.useSharedStorage` | Enabled, Indicates that shared storage is used (filsystem tab)            | `true`                    |
+| `storage.createPvc`         | Enabled, Indicates that a new PVC is created            | `true`                    |
+| `storage.pvc`               | The persistent volume claim name to be created          | `kubetoy-pvc`             |
+| `storage.accessmode`       | The access mode for persistent storage volume           | `NodePort`                 |
 
+Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
 
+```bash
+$ helm install --name my-kubetoy-release \
+  --set image.pullPolilcy=Always \
+    ibmicpcoc/kubetoy
+```
 
+The above command sets the image pull policy to always.
+
+Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
+
+```bash
+$ helm install --name my-kubetoys-release -f values.yaml ibmicpcoc/kubetoy
+```
+
+> **Tip**: You can use the default [values.yaml](values.yaml)
+
+## Persistence
+
+The image stores the Jenkins data and configurations at the `/var/jenkins_home` path of the container.
+
+The chart mounts a [Persistent Volume](kubernetes.io/docs/user-guide/persistent-volumes/) volume at this location. By default, 
+a PVC is created for you with the name given.  If this already exists then you should un-check the option to create the PVC.
+
+### Using Existing PersistentVolumeClaims
+
+1. Create the PersistentVolume
+2. Create the PersistentVolumeClaim
+3. Install the chart:
+    ```bash
+    $ helm install --set storage.pvc=PVC_NAME ibmicpcoc/jenkins-icp
+    ```
+
+## Copyright
+© Copyright IBM Corporation 2018. All Rights Reserved.

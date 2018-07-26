@@ -6,8 +6,8 @@ image:
 service:
   name: kubetoy-service
   type: NodePort
-  externalPort: 80
 storage:
   useSharedStorage: true
+  createPvc: true
   pvc: kubetoy-pvc
   accessmode: ReadWriteMany

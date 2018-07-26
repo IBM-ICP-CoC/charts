@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ template "fullname" . }}
@@ -6,57 +6,60 @@ metadata:
     app: {{ template "name" . }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
 spec:
-  replicas: {{ .Values.replicaCount }}
-  template:
-    metadata:
-      labels:
-        app: {{ template "name" . }}
-    spec:
-      containers:
-      - name: {{ .Chart.Name }}
-        image: "{{ .Values.image.repository }}:{{ .Chart.Version }}"
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
-        ports:
-        - containerPort: 3000
-        env:
-        - name: ENV_TOY_CONFIGMAP
-          valueFrom: 
-            configMapKeyRef:
-              name: kubetoy-configmap-env
-              key: ENV_TOY_CONFIGMAP
-        - name: ENV_TOY_SECRET
-          valueFrom:
-            secretKeyRef:
-              name: kubetoy-secret-env
-              key: ENV_TOY_SECRET
-        volumeMounts:
-        - name: configvol
-          mountPath: /var/config
-        - name: secretvol
-          mountPath: /var/secret
+    selector:
+      matchLabels:
+        app: kubetoy
+    replicas: {{ .Values.replicaCount }}
+    template:
+      metadata:
+        labels:
+          app: {{ template "name" . }}
+      spec:
+        containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Chart.Version }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+          - containerPort: 3000
+          volumeMounts:
+          - name: configvol
+            mountPath: /var/config
+          - name: secretvol
+            mountPath: /var/secret
 # {{ if .Values.storage.useSharedStorage  }}
-        - name: datavol
-          mountPath: /var/test
+          - name: datavol
+            mountPath: /var/test
 # {{ end }}
-        livenessProbe:
-          httpGet:
-            path: /health
-            port: 3000
-          initialDelaySeconds: 10
-          periodSeconds: 5
-      volumes:
-      - name: configvol
-        configMap:
-          name: kubetoy-configmap-files
-      - name: secretvol
-        secret:
-          secretName: kubetoy-secret-files
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 10
+            periodSeconds: 5
+          env:
+          - name: ENV_TOY_CONFIGMAP
+            valueFrom: 
+              configMapKeyRef:
+                name: kubetoy-configmap-env
+                key: ENV_TOY_CONFIGMAP
+          - name: ENV_TOY_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: kubetoy-secret-env
+                key: ENV_TOY_SECRET
+          volumes:
+            - name: configvol
+              configMap:
+                name: kubetoy-configmap-files
+            - name: secretvol
+              secret:
+                secretName: kubetoy-secret-files
 # {{ if .Values.storage.useSharedStorage  }}
-      - name: datavol
-        persistentVolumeClaim:
-          claimName: {{ .Values.storage.pvc }} 
+            - name: datavol
+              persistentVolumeClaim:
+                claimName: {{ .Values.storage.pvc }}
 # {{ end }}
-# {{ if .Values.storage.useSharedStorage  }}
+# {{ if .Values.storage.createPvc  }}
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
