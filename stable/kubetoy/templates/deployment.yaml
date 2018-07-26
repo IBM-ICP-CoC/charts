@@ -47,17 +47,17 @@ spec:
               secretKeyRef:
                 name: kubetoy-secret-env
                 key: ENV_TOY_SECRET
-          volumes:
-            - name: configvol
-              configMap:
-                name: kubetoy-configmap-files
-            - name: secretvol
-              secret:
-                secretName: kubetoy-secret-files
+        volumes:
+          - name: configvol
+            configMap:
+              name: kubetoy-configmap-files
+          - name: secretvol
+            secret:
+              secretName: kubetoy-secret-files
 # {{ if .Values.storage.useSharedStorage  }}
-            - name: datavol
-              persistentVolumeClaim:
-                claimName: {{ .Values.storage.pvc }}
+          - name: datavol
+            persistentVolumeClaim:
+              claimName: {{ .Values.storage.pvc }}
 # {{ end }}
 # {{ if .Values.storage.createPvc  }}
 ---
