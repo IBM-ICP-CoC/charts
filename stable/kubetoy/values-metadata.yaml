@@ -2,20 +2,59 @@
 
 storage:
   __metadata:
-    label: "Storate"
+    label: "Use Shared Storage"
   useSharedStorage:
-   __metadata:
+    __metadata:
       name: "useSharedStorage"
       label: "Enable persistence for this deployment"
       description: "Enables persistence for this deployment. Defaults to false. A persistent volume is required if true."
       type: "boolean"
       immutable: "false"
-      required: true
+      required: false
+  useStorageClass:
+    __metadata:
+       name: "useStorageClass"
+       label: "Use dynamic storage class for this persistent volume claim."
+       description: "Enables the use of dynamically provisioned storage based on a storage class."
+       type: "boolean"
+       immutable: "false"
+       required: false
   createPvc:
-   __metadata:
+    __metadata:
       name: "createPvc"
       label: "Create a new PVC"
-      description: "Will create a new PVC, requesting 1Gi of storage and the specified access mode."
+      description: "Will create a new PVC, requesting 1Gi of storage and the specified access mode.  If set to false then it will try to use an existing PVC."
       type: "boolean"
       immutable: "false"
+      required: false
+  accessMode:
+     __metadata:
+       name: "accessMode"
+       label: "PVC access mode"
+       description: "ReadWriteOnce, ReadOnlyMany, or ReadWriteMany."
+       type: "string"
+       immutable: false
+       required: true
+       options:
+       - label: "ReadWriteOnce"
+         value: "ReadWriteOnce"
+       - label: "ReadOnlyMany"
+         value: "ReadOnlyMany"
+       - label: "ReadWriteMany"
+         value: "ReadWriteMany"
+image:
+  pullPolicy:
+    __metadata:
+      name: "pullPolicy"
+      label: "Docker image pull policy"
+      description: "Always, Never, or IfNotPresent. Defaults to IfNotPresent"
+      type: "string"
+      immutable: "false"
       required: true
+      options:
+      - label: "IfNotPresent"
+        value: "IfNotPresent"
+      - label: "Always"
+        value: "Always"
+      - label: "Never"
+        value: "Never"

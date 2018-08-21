@@ -72,3 +72,6 @@ spec:
     requests:
       storage: 1Gi
 # {{ end }}
+# {{ if .Values.storage.useStorageClass  }}
+  storageClassName: {{ .Values.storage.className }}
+# {{ end }}

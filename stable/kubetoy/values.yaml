@@ -10,4 +10,4 @@ storage:
   useSharedStorage: true
   createPvc: true
   pvc: kubetoy-pvc
-  accessmode: ReadWriteMany
+  accessMode: ReadWriteMany

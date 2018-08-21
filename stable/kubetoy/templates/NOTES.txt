@@ -1,4 +1,2 @@
 This is just a simple toy application for exploring Kubernetes.  
 
-If you override the storage.useSharedStorage parameter, make sure the persistent volume claim is 
-not already used by another instance of the app.
