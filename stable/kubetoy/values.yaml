@@ -7,7 +7,9 @@ service:
   name: kubetoy-service
   type: NodePort
 storage:
-  useSharedStorage: true
+  useSharedStorage: false
   createPvc: true
   pvc: kubetoy-pvc
+  useStorageClass: false
+  storageClassName: 
   accessMode: ReadWriteMany

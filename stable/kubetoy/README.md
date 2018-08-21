@@ -1,5 +1,5 @@
 ![KubeToy](https://ibm-icp-coc.github.io/charts/repo/stable/duck.png "KubeToy logo")
-# Kubetoy 1.6.0
+# Kubetoy 1.6.1
 
 A Kubernetes Toy Application
 
@@ -9,7 +9,7 @@ See the GitHub [documentation](https://github.com/IBM-ICP-CoC/KubeToy) for examp
 app.
 
 
-Versions 1.6.0 has new Network page to do DNS lookups and pings from.
+Versions 1.6.1 has new Network page to do DNS lookups and pings from.
 
 
 ## Configuration
