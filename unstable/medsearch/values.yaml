@@ -1,0 +1,8 @@
+# Default values for medsearch.
+replicaCount: 1
+image:
+  repository: ibmicpcoc/medsearch
+  pullPolicy: IfNotPresent
+service:
+  name: medsearch-service
+  
