@@ -3,7 +3,7 @@
 
 Package Version: 1.0.0
 
-A packaging of FeedbackService, a sample node.js application based microservice.  This application is designed for use with 
+Feedback is a sample microservice developed using node.js.  This microservice is designed for use with 
 other applications or services to provide tone analysis of provided text.  The actual tone analysis is performed by IBM Watson™ Tone Analyzer.
 
 This application is used to help demonstrate features of IBM Cloud Private and other IBM software.
