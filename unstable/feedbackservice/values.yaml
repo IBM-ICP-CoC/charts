@@ -1,0 +1,8 @@
+# Default values for medsearch.
+replicaCount: 1
+image:
+  repository: ibmicpcoc/feedbackservice
+  pullPolicy: IfNotPresent
+service:
+  type: feedback-service
+  port: NodePort
