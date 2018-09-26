@@ -58,8 +58,6 @@ spec:
           - name: datavol
             persistentVolumeClaim:
               claimName: {{ .Values.storage.pvc }}
-# {{ end }}
-# {{ if .Values.storage.createPvc  }}
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -67,11 +65,11 @@ metadata:
   name: {{ .Values.storage.pvc }}
 spec:
   accessModes:
-    - {{ .Values.storage.accessmode }}
+    - {{ .Values.storage.accessMode }}
   resources:
     requests:
       storage: 1Gi
-# {{ end }}
 # {{ if .Values.storage.useStorageClass  }}
   storageClassName: {{ .Values.storage.className }}
+# {{ end }}
 # {{ end }}

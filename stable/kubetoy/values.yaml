@@ -11,5 +11,5 @@ storage:
   createPvc: true
   pvc: kubetoy-pvc
   useStorageClass: false
-  storageClassName: 
+  storageClassName: "standard"
   accessMode: "ReadWriteMany"
