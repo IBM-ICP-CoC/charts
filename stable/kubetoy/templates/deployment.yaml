@@ -40,20 +40,20 @@ spec:
           - name: ENV_TOY_CONFIGMAP
             valueFrom: 
               configMapKeyRef:
-                name: "{{ .Release.Name }}-configmap-env"
+                name: "{{ .Release.Name }}-kubetoy-configmap-env"
                 key: ENV_TOY_CONFIGMAP
           - name: ENV_TOY_SECRET
             valueFrom:
               secretKeyRef:
-                name: "{{ .Release.Name }}-secret-env"
+                name: "{{ .Release.Name }}-kubetoy-secret-env"
                 key: ENV_TOY_SECRET
         volumes:
           - name: configvol
             configMap:
-              name: "{{ .Release.Name }}-configmap-files"
+              name: "{{ .Release.Name }}-kubetoy-configmap-files"
           - name: secretvol
             secret:
-              secretName: "{{ .Release.Name }}-secret-files"
+              secretName: "{{ .Release.Name }}-kubetoy-secret-files"
 # {{ if .Values.storage.useSharedStorage  }}
           - name: datavol
             persistentVolumeClaim:
@@ -68,7 +68,7 @@ spec:
     - {{ .Values.storage.accessMode }}
   resources:
     requests:
-      storage: 1Gi
+      storage: 5MB
 # {{ if .Values.storage.useStorageClass  }}
   storageClassName: {{ .Values.storage.className }}
 # {{ end }}
