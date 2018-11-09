@@ -10,7 +10,7 @@ storage:
       description: "Enables persistence for this deployment. Defaults to false. A persistent volume is required if true."
       type: "boolean"
       immutable: "false"
-      required: false
+      required: true
   useStorageClass:
     __metadata:
        name: "useStorageClass"
@@ -18,7 +18,7 @@ storage:
        description: "Enables the use of dynamically provisioned storage based on a storage class."
        type: "boolean"
        immutable: "false"
-       required: false
+       required: true
   createPvc:
     __metadata:
       name: "createPvc"
@@ -26,7 +26,7 @@ storage:
       description: "Will create a new PVC, requesting 1Gi of storage and the specified access mode.  If set to false then it will try to use an existing PVC."
       type: "boolean"
       immutable: "false"
-      required: false
+      required: true
   accessMode:
      __metadata:
        name: "accessMode"
