@@ -1,5 +1,5 @@
 ![KubeToy](https://ibm-icp-coc.github.io/charts/repo/stable/duck.png "KubeToy logo")
-# Kubetoy 1.7.0
+# Kubetoy 1.7.1
 
 A Kubernetes Toy Application
 
@@ -9,7 +9,7 @@ See the GitHub [documentation](https://github.com/IBM-ICP-CoC/KubeToy) for examp
 app.
 
 
-Versions 1.7.0 has mutation button to evaluate ICP 3.1.0 Mutation Advisor, and Liunx Stress page.
+Versions 1.7.1 has mutation button to evaluate ICP 3.1.0 Mutation Advisor, and Linux Stress page.
 
 
 ## Configuration

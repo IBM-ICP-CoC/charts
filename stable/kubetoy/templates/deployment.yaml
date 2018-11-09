@@ -40,20 +40,20 @@ spec:
           - name: ENV_TOY_CONFIGMAP
             valueFrom: 
               configMapKeyRef:
-                name: kubetoy-configmap-env
+                name: "{{ .Release.Name }}-configmap-env"
                 key: ENV_TOY_CONFIGMAP
           - name: ENV_TOY_SECRET
             valueFrom:
               secretKeyRef:
-                name: kubetoy-secret-env
+                name: "{{ .Release.Name }}-secret-env"
                 key: ENV_TOY_SECRET
         volumes:
           - name: configvol
             configMap:
-              name: kubetoy-configmap-files
+              name: "{{ .Release.Name }}-configmap-files"
           - name: secretvol
             secret:
-              secretName: kubetoy-secret-files
+              secretName: "{{ .Release.Name }}-secret-files"
 # {{ if .Values.storage.useSharedStorage  }}
           - name: datavol
             persistentVolumeClaim:
