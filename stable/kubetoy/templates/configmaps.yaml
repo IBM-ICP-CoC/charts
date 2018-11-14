@@ -2,14 +2,14 @@
 kind: ConfigMap
 apiVersion: v1
 metadata:
-  name: "{{ .Release.Name }}-configmap-env"
+  name: "{{ .Release.Name }}-kubetoy-configmap-env"
 data:
   ENV_TOY_CONFIGMAP: 'This is a configuration value.'
 ---
 apiVersion: v1
 kind: Secret
 metadata:
-  name: "{{ .Release.Name }}-secret-env"
+  name: "{{ .Release.Name }}-kubetoy-secret-env"
 type: Opaque
 data:
   ENV_TOY_SECRET: VGhpcyBpcyBhIHRlc3Q=
@@ -17,7 +17,7 @@ data:
 kind: ConfigMap
 apiVersion: v1
 metadata:
-  name: "{{ .Release.Name }}-configmap-files"
+  name: "{{ .Release.Name }}-kubetoy-configmap-files"
 data:
   config.json: '{ "default": "123" }'
   version.txt: 'v1.6.1'
@@ -25,7 +25,7 @@ data:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: "{{ .Release.Name }}-secret-files"
+  name: "{{ .Release.Name }}-kubetoy-secret-files"
 type: Opaque
 data:
   toy-secret.txt: U2hoLi4uIFRoaXMgaXMgYSBzZWNyZXQu
