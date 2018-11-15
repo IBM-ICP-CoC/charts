@@ -68,7 +68,7 @@ spec:
     - {{ .Values.storage.accessMode }}
   resources:
     requests:
-      storage: 5MB
+      storage: 1Gi
 # {{ if .Values.storage.useStorageClass  }}
   storageClassName: {{ .Values.storage.className }}
 # {{ end }}
