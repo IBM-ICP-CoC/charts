@@ -10,20 +10,13 @@
 {{- end }}
 
 {{- define "nodeAffinityRequiredDuringScheduling" }}
-    #If you specify multiple nodeSelectorTerms associated with nodeAffinity types,
-    #then the pod can be scheduled onto a node if one of the nodeSelectorTerms is satisfied.
-    #
-    #If you specify multiple matchExpressions associated with nodeSelectorTerms,
-    #then the pod can be scheduled onto a node only if all matchExpressions can be satisfied.
-    #
-    #valid operators: In, NotIn, Exists, DoesNotExist, Gt, Lt
       nodeSelectorTerms:
       - matchExpressions:
         - key: beta.kubernetes.io/arch
           operator: In
           values:
         {{- range $key, $val := .Values.arch }}
-          {{- if gt ($val | trunc 1 | int) 0 }}
+          {{- if gt ($val | int) 0 }}
           - {{ $key }}
           {{- end }}
         {{- end }}
@@ -31,8 +24,8 @@
 
 {{- define "nodeAffinityPreferredDuringScheduling" }}
   {{- range $key, $val := .Values.arch }}
-    {{- if gt ($val | trunc 1 | int) 0 }}
-    - weight: {{ $val | trunc 1 | int }}
+    {{- if gt ($val  | int) 0 }}
+    - weight: {{ $val | int }}
       preference:
         matchExpressions:
         - key: beta.kubernetes.io/arch
