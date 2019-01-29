@@ -1,8 +1,8 @@
 # Default values for kubetoy.
 arch:
-  amd64: "2 - No preference"
-  ppc64le: "2 - No preference"
-  s390x: "2 - No preference"
+  amd64: 2
+  ppc64le: 2
+  s390x: 2
 replicaCount: 3
 image:
   repository: ibmicpcoc/kubetoy
