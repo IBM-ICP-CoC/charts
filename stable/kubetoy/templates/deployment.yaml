@@ -15,8 +15,7 @@ spec:
         labels:
           app: {{ template "name" . }}
       spec:
-        affinity:
-          {{- include "nodeaffinity" . | indent 6 }}
+        {{- include "nodeaffinity" . | indent 8 }}
         containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Chart.Version }}"
