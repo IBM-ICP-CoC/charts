@@ -1,5 +1,5 @@
 ![KubeToy](https://ibm-icp-coc.github.io/charts/repo/stable/duck.png "KubeToy logo")
-# Kubetoy 1.7.1
+# Kubetoy 1.8.0
 
 A Kubernetes Toy Application
 
@@ -9,7 +9,7 @@ See the GitHub [documentation](https://github.com/IBM-ICP-CoC/KubeToy) for examp
 app.
 
 
-Versions 1.7.1 has mutation button to evaluate ICP 3.1.0 Mutation Advisor, and Linux Stress page.
+Versions 1.8.0 is the first multiarch build, supporting amd64, ppc64le and x390s.
 
 
 ## Configuration
@@ -18,6 +18,9 @@ The following tables lists the configurable parameters of the Jenkins chart and 
 
 |         Parameter            |                       Description                       |           Default          |
 |------------------------------|---------------------------------------------------------|----------------------------|
+| `arch.amd64`                  | `Amd64 worker node scheduler preference in a hybrid cluster` | `2 - No preference` - worker node is chosen by scheduler       |
+| `arch.ppc64le`                | `Ppc64le worker node scheduler preference in a hybrid cluster` | `2 - No preference` - worker node is chosen by scheduler       |
+| `arch.s390x`                  | `S390x worker node scheduler preference in a hybrid cluster` | `2 - No preference` - worker node is chosen by scheduler       |
 | `image.repository`         | The repository and image name                           | `ibmicpcoc/kubetoy`      |
 | `image.pullPolilcy`        | The pull policy for images                              | `IfNotPresent`            |
 | `service.name`              | The name of the service resource                        | `kubetoy-service`        |

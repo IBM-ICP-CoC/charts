@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   jenkins-icp:
   - apiVersion: v1
-    created: 2018-11-15T18:45:58.311348-05:00
+    created: 2019-01-29T12:03:35.822760754-05:00
     description: A Helm chart for Jenkins on ICP
     digest: 53ea0ed7c54d19be36ae22546e88a6eed553f9f2ece6b31d4aa27f98f663c550
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/jenkins.png
@@ -12,7 +12,16 @@ entries:
     version: 1.0.1
   kubetoy:
   - apiVersion: v1
-    created: 2018-11-15T18:45:58.41916-05:00
+    created: 2019-01-29T12:03:35.824294071-05:00
+    description: A simple Node.js application used to explore Kubernetes deployments.
+    digest: 425567aaa0082abe1222850709c0c2f9f4abb8d96a975c71d6ad9785afb63aaf
+    icon: https://ibm-icp-coc.github.io/charts/repo/stable/duck.png
+    name: kubetoy
+    urls:
+    - https://ibm-icp-coc.github.io/charts/repo/stable/kubetoy-1.8.0.tgz
+    version: 1.8.0
+  - apiVersion: v1
+    created: 2019-01-29T12:03:35.823901356-05:00
     description: A simple Node.js application used to explore Kubernetes deployments.
     digest: f91a44d5e201e1c9c26d91dfd9ebb795e78b020f8f29d78e716e98e286d04a0b
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/duck.png
@@ -21,7 +30,7 @@ entries:
     - https://ibm-icp-coc.github.io/charts/repo/stable/kubetoy-1.7.1.tgz
     version: 1.7.1
   - apiVersion: v1
-    created: 2018-11-15T18:45:58.418652-05:00
+    created: 2019-01-29T12:03:35.823477352-05:00
     description: A simple Node.js application used to explore Kubernetes deployments.
     digest: 25117eaa2b1e7b1fbf5d4e7f6637adfb4117b67a285c871f910db4891c6d5742
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/duck.png
@@ -30,7 +39,7 @@ entries:
     - https://ibm-icp-coc.github.io/charts/repo/stable/kubetoy-1.6.0.tgz
     version: 1.6.0
   - apiVersion: v1
-    created: 2018-11-15T18:45:58.329938-05:00
+    created: 2019-01-29T12:03:35.82312821-05:00
     description: A simple Node.js application used to explore Kubernetes deployments.
     digest: fd481942309fcf8f547adf621807f87cce3422fec7a3e2a54c744bae456e92e4
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/duck.png
@@ -40,7 +49,7 @@ entries:
     version: 1.5.1
   medsearch:
   - apiVersion: v1
-    created: 2018-11-15T18:45:58.435464-05:00
+    created: 2019-01-29T12:03:35.825004868-05:00
     description: A Helm chart for MedSearch on ICP
     digest: 35d430933364c997d7cc94beb22c4996b8ebdd89be3f38fa0fab781e8f3179d5
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/medsearch.png
@@ -48,4 +57,4 @@ entries:
     urls:
     - https://ibm-icp-coc.github.io/charts/repo/stable/medsearch-1.0.0.tgz
     version: 1.0.0
-generated: 2018-11-15T18:45:58.286125-05:00
+generated: 2019-01-29T12:03:35.821384549-05:00
