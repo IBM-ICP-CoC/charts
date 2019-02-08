@@ -8,12 +8,12 @@ metadata:
 spec:
     selector:
       matchLabels:
-        app: kubetoy
+        app: {{ template "fullname" . }}
     replicas: {{ .Values.replicaCount }}
     template:
       metadata:
         labels:
-          app: {{ template "name" . }}
+          app: {{ template "fullname" . }}
       spec:
         {{- include "nodeaffinity" . | indent 8 }}
         containers:

@@ -15,5 +15,5 @@ storage:
   createPvc: false
   pvc: kubetoy-pvc
   useStorageClass: false
-  storageClassName: "standard"
+  storageClassName: "glusterfs"
   accessMode: "ReadWriteMany"

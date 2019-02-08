@@ -1,5 +1,5 @@
 ![KubeToy](https://ibm-icp-coc.github.io/charts/repo/stable/duck.png "KubeToy logo")
-# Kubetoy 1.8.0
+# Kubetoy 1.8.1
 
 A Kubernetes Toy Application
 
@@ -8,8 +8,8 @@ This a simple Node.js app to be used with IBM Cloud Private demos.  It helps exp
 See the GitHub [documentation](https://github.com/IBM-ICP-CoC/KubeToy) for examples of how to use this 
 app.
 
-
-Versions 1.8.0 is the first multiarch build, supporting amd64, ppc64le and x390s.
+This 1.8.1
+Versions 1.8.0+ are the first multiarch build, supporting amd64, ppc64le and x390s.
 
 
 ## Configuration
