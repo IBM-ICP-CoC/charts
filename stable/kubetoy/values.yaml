@@ -7,13 +7,9 @@ replicaCount: 3
 image:
   repository: ibmicpcoc/kubetoy
   pullPolicy: IfNotPresent
-service:
-  name: kubetoy-service
-  type: NodePort
 storage:
   useSharedStorage: false
   createPvc: false
-  pvc: kubetoy-pvc
   useStorageClass: false
   storageClassName: "glusterfs"
   accessMode: "ReadWriteMany"

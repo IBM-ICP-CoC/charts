@@ -6,11 +6,10 @@ metadata:
     app: {{ template "fullname" . }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
 spec:
-  type: {{ .Values.service.type }}
+  type: NodePort
   ports:
-    - port: 80
-      targetPort: 3000
+    - targetPort: 3000
       protocol: TCP
-      name: {{ .Values.service.name }}
+      name: "http"
   selector:
     app: {{ template "fullname" . }}

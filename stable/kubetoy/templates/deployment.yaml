@@ -58,12 +58,12 @@ spec:
 # {{ if .Values.storage.useSharedStorage  }}
           - name: datavol
             persistentVolumeClaim:
-              claimName: {{ .Values.storage.pvc }}
+              claimName: "{{ .Release.Name }}-kubetoy-pvc"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: {{ .Values.storage.pvc }}
+  name: "{{ .Release.Name }}-kubetoy-pvc"
 spec:
   accessModes:
     - {{ .Values.storage.accessMode }}
