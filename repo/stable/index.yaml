@@ -28,22 +28,6 @@ entries:
     - https://ibm-icp-coc.github.io/charts/repo/stable/kubetoy-1.8.1.tgz
     version: 1.8.1
   - apiVersion: v1
-    created: 2019-03-06T10:15:46.787515227-05:00
-    description: A simple Node.js application used to explore Kubernetes deployments.
-    digest: e7f87e02317143d036fddca9993d1d47f4b4559b389748536ecb3566a0cdfc3f
-    icon: https://ibm-icp-coc.github.io/charts/repo/stable/duck.png
-    name: kubetoy
-    keywords:
-    - toy
-    - amd64
-    - ppc64le
-    - s390x
-    - ICP
-    - kubernetes
-    urls:
-    - https://ibm-icp-coc.github.io/charts/repo/stable/kubetoy-1.8.0.tgz
-    version: 1.8.0
-  - apiVersion: v1
     created: 2019-03-06T10:15:46.787125928-05:00
     description: A simple Node.js application used to explore Kubernetes deployments.
     digest: f91a44d5e201e1c9c26d91dfd9ebb795e78b020f8f29d78e716e98e286d04a0b
