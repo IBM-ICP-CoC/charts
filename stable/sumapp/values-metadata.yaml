@@ -1,5 +1,3 @@
-## This metadata is used to augment the value.yaml to drive ICP UI for configuration of the Helm chart installation
-
 image:
   pullPolicy:
     __metadata:

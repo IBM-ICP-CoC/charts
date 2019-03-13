@@ -1,0 +1,4 @@
+replicaCount: 1
+image:
+  repository: ibmicpcoc/sumapp
+  pullPolicy: IfNotPresent

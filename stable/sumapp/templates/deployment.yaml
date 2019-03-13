@@ -8,16 +8,16 @@ metadata:
 spec:
     selector:
       matchLabels:
-        app: {{ template "name" . }}
+        app: {{ template "fullname" . }}
     replicas: {{ .Values.replicaCount }}
     template:
       metadata:
         labels:
-          app: {{ template "name" . }}
+          app: {{ template "fullname" . }}
       spec:
         containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Chart.Version }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-          - containerPort: 3001
+          - containerPort: 9080
