@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   jenkins-icp:
   - apiVersion: v1
-    created: 2019-03-13T20:06:15.653824235-04:00
+    created: 2019-03-13T20:19:48.664644108-04:00
     description: A Helm chart for Jenkins on ICP
     digest: 53ea0ed7c54d19be36ae22546e88a6eed553f9f2ece6b31d4aa27f98f663c550
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/jenkins.png
@@ -12,7 +12,7 @@ entries:
     version: 1.0.1
   kubetoy:
   - apiVersion: v1
-    created: 2019-03-13T20:06:15.656580123-04:00
+    created: 2019-03-13T20:19:48.66549998-04:00
     description: A simple Node.js application used to explore Kubernetes deployments.
     digest: 7933a9b3ec4dbe331bbd040a868c1710318dbb423db0cfd34338a710abad6104
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/duck.png
@@ -28,7 +28,7 @@ entries:
     - https://ibm-icp-coc.github.io/charts/repo/stable/kubetoy-1.8.1.tgz
     version: 1.8.1
   - apiVersion: v1
-    created: 2019-03-13T20:06:15.655433704-04:00
+    created: 2019-03-13T20:19:48.665034722-04:00
     description: A simple Node.js application used to explore Kubernetes deployments.
     digest: efc1cc9cf6cfba6abaf39b2f924182a447e9547f6caf7effa3a817ecb4f3f4a5
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/duck.png
@@ -43,7 +43,7 @@ entries:
     version: 1.7.1
   medsearch:
   - apiVersion: v1
-    created: 2019-03-13T20:06:15.657664319-04:00
+    created: 2019-03-13T20:19:48.666334343-04:00
     description: A Helm chart for MedSearch on ICP
     digest: 35d430933364c997d7cc94beb22c4996b8ebdd89be3f38fa0fab781e8f3179d5
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/medsearch.png
@@ -53,9 +53,9 @@ entries:
     version: 1.0.0
   sumapp:
   - apiVersion: v1
-    created: 2019-03-13T20:06:15.659741124-04:00
+    created: 2019-03-13T20:19:48.668342036-04:00
     description: A simple stateless Liberty application for adding numbers
-    digest: b3a08eabe11b855d7a6e191e7e6b42172d191a48174964ad46308632b4ac29f1
+    digest: b5d76c0488cb54607522c8368ba59576305c123bfd9db030ce7e82edd797859c
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/sigma.png
     keywords:
     - sample
@@ -66,4 +66,4 @@ entries:
     urls:
     - https://ibm-icp-coc.github.io/charts/repo/stable/sumapp-1.0.0.tgz
     version: 1.0.0
-generated: 2019-03-13T20:06:15.651330722-04:00
+generated: 2019-03-13T20:19:48.66383009-04:00

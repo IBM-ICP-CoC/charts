@@ -1,7 +1,6 @@
-![SumApp](https://ibm-icp-coc.github.io/charts/repo/stable/sigma.png "SumApp logo")
 # SumApp 1.0.0
 
-A Simple Liberty Application 
+## A Simple Liberty Application 
 
 This a simple Liberty app that adds two integers together.
 
