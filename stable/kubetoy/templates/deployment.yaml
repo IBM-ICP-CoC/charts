@@ -27,6 +27,10 @@ spec:
             mountPath: /var/config
           - name: secretvol
             mountPath: /var/secret
+# {{ if .Values.cos.useCloudObjectStorage  }}
+          - name: cosconfigvol
+            mountPath: /cos-configuration
+# {{ end }}
 # {{ if .Values.storage.useSharedStorage  }}
           - name: datavol
             mountPath: /var/test
@@ -49,16 +53,21 @@ spec:
                 name: "{{ .Release.Name }}-kubetoy-secret-env"
                 key: ENV_TOY_SECRET
         volumes:
-          - name: configvol
-            configMap:
-              name: "{{ .Release.Name }}-kubetoy-configmap-files"
-          - name: secretvol
-            secret:
-              secretName: "{{ .Release.Name }}-kubetoy-secret-files"
+# {{ if .Values.cos.useCloudObjectStorage  }}
+        - name: cosconfigvol
+          configMap:
+            name: "{{ .Release.Name }}-kubetoy-cos-configmap"
+# {{ end }}
+        - name: configvol
+          configMap:
+            name: "{{ .Release.Name }}-kubetoy-configmap-files"
+        - name: secretvol
+          secret:
+            secretName: "{{ .Release.Name }}-kubetoy-secret-files"
 # {{ if .Values.storage.useSharedStorage  }}
-          - name: datavol
-            persistentVolumeClaim:
-              claimName: "{{ .Release.Name }}-kubetoy-pvc"
+        - name: datavol
+          persistentVolumeClaim:
+            claimName: "{{ .Release.Name }}-kubetoy-pvc"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim

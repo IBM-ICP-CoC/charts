@@ -55,7 +55,46 @@ arch:
         value: 2
       - label: "3 - Most preferred"
         value: 3 
-
+cos:
+  __metadata:
+    label: "Use Cloud Object Storage (S3)"
+    description: "Experiment with shared object (S3) storage."
+  useCloudObjectStorage:
+    __metadata:
+      label: "Connect to S3 object storage"
+      description: "Enables the cloud object storage page, which allows you to create, remove and view objects in S3 storage."
+      type: "boolean"
+      immutable: "false"
+      required: true
+  bucket:
+    __metadata:
+      label: "Bucket Name"
+      description: "The name of an existing bucket in storage."
+      type: "string"
+      immutable: false
+      required: false
+  endpoint:
+    __metadata:
+      label: "Endpoint"
+      description: "The endpoint URI to send requests to. The default endpoint is built from the configured region. The endpoint should be a string like 's3.us.cloud-object-storage.appdomain.cloud'."
+      type: "string"
+      immutable: false
+      required: false
+  accessKeyId:
+    __metadata:
+      label: "Access Key Id"
+      description: "Your access key ID for AWS or Softlayer"
+      type: "string"
+      immutable: false
+      required: false
+  secretAccessKey:
+    __metadata:
+      label: "Secret Access Key"
+      description: "Your secret access key ID for AWS or Softlayer"
+      type: "string"
+      immutable: false
+      required: false
+  
 storage:
   __metadata:
     label: "Use Shared Storage"

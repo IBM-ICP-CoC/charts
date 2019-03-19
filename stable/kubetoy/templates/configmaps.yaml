@@ -28,3 +28,12 @@ metadata:
 type: Opaque
 data:
   toy-secret.txt: U2hoLi4uIFRoaXMgaXMgYSBzZWNyZXQu
+# {{ if .Values.cos.useCloudObjectStorage  }}
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: "{{ .Release.Name }}-kubetoy-cos-configmap"
+data:
+  cos-credentials.json: '{ "bucket": "{{ .Values.cos.bucket }}", "endpoint": "{{ .Values.cos.endpoint }}", "accessKeyId": "{{ .Values.cos.accessKeyId }}", "secretAccessKey": "{{ .Values.cos.secretAccessKey }}" }'
+# {{ end }}

@@ -13,3 +13,9 @@ storage:
   useStorageClass: false
   storageClassName: "glusterfs"
   accessMode: "ReadWriteMany"
+cos:
+  useCloudObjectStorage: false
+  bucket: ""
+  endpoint: ""
+  accessKeyId: ""
+  secretAccessKey: ""
