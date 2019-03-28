@@ -8,7 +8,7 @@ metadata:
     role: slave
 spec:
   ports:
-  - name: "http"
+  - name: redis-server
     port: {{ .Values.redis.port }}
     targetPort: redis-server
   selector:
