@@ -1,8 +1,17 @@
 apiVersion: v1
 entries:
+  guestbook:
+  - apiVersion: v1
+    created: 2019-03-28T09:55:41.826276752-04:00
+    description: A Helm chart to deploy Guestbook three tier web application.
+    digest: 74d7c81b83aeea22feb3c4710f86c42b5be61e3783da5fb649edd66f3df55f90
+    name: guestbook
+    urls:
+    - https://ibm-icp-coc.github.io/charts/repo/stable/guestbook-0.2.0.tgz
+    version: 0.2.0
   jenkins-icp:
   - apiVersion: v1
-    created: 2019-03-19T14:02:07.279512508-04:00
+    created: 2019-03-28T09:55:41.826732593-04:00
     description: A Helm chart for Jenkins on ICP
     digest: 53ea0ed7c54d19be36ae22546e88a6eed553f9f2ece6b31d4aa27f98f663c550
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/jenkins.png
@@ -12,7 +21,7 @@ entries:
     version: 1.0.1
   kubetoy:
   - apiVersion: v1
-    created: 2019-03-19T14:02:07.283850501-04:00
+    created: 2019-03-28T09:55:41.830950243-04:00
     description: A simple Node.js application used to explore Kubernetes deployments.
     digest: 8cbf67adb6a6be3700cfce9b5d6e51e0e2a22096659ddff831512a0bbb2d4e7e
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/duck.png
@@ -29,7 +38,7 @@ entries:
     - https://ibm-icp-coc.github.io/charts/repo/stable/kubetoy-1.9.0.tgz
     version: 1.9.0
   - apiVersion: v1
-    created: 2019-03-19T14:02:07.283383354-04:00
+    created: 2019-03-28T09:55:41.829263445-04:00
     description: A simple Node.js application used to explore Kubernetes deployments.
     digest: 7933a9b3ec4dbe331bbd040a868c1710318dbb423db0cfd34338a710abad6104
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/duck.png
@@ -45,7 +54,7 @@ entries:
     - https://ibm-icp-coc.github.io/charts/repo/stable/kubetoy-1.8.1.tgz
     version: 1.8.1
   - apiVersion: v1
-    created: 2019-03-19T14:02:07.281390101-04:00
+    created: 2019-03-28T09:55:41.827855245-04:00
     description: A simple Node.js application used to explore Kubernetes deployments.
     digest: efc1cc9cf6cfba6abaf39b2f924182a447e9547f6caf7effa3a817ecb4f3f4a5
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/duck.png
@@ -55,7 +64,7 @@ entries:
     version: 1.7.1
   medsearch:
   - apiVersion: v1
-    created: 2019-03-19T14:02:07.28521912-04:00
+    created: 2019-03-28T09:55:41.832382604-04:00
     description: A Helm chart for MedSearch on ICP
     digest: 35d430933364c997d7cc94beb22c4996b8ebdd89be3f38fa0fab781e8f3179d5
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/medsearch.png
@@ -65,7 +74,7 @@ entries:
     version: 1.0.0
   sumapp:
   - apiVersion: v1
-    created: 2019-03-19T14:02:07.289417431-04:00
+    created: 2019-03-28T09:55:41.835312982-04:00
     description: A simple stateless Liberty application for adding numbers
     digest: b5d76c0488cb54607522c8368ba59576305c123bfd9db030ce7e82edd797859c
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/sigma.png
@@ -78,4 +87,4 @@ entries:
     urls:
     - https://ibm-icp-coc.github.io/charts/repo/stable/sumapp-1.0.0.tgz
     version: 1.0.0
-generated: 2019-03-19T14:02:07.27751323-04:00
+generated: 2019-03-28T09:55:41.824576971-04:00
