@@ -1,0 +1,17 @@
+# IBM Guestbook image version ibmcom/guestbook:v1
+
+replicaCount: 2
+
+image:
+  repository: ibmcom/guestbook
+  tag: v1
+  pullPolicy: Always
+
+service:
+  type: LoadBalancer
+  port: 3000
+
+redis:
+  port: 6379 
+  slaveEnabled: true
+

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-master
+  labels:
+    app: redis
+    role: master
+spec:
+  ports:
+  - name: "http"
+    port: {{ .Values.redis.port }}
+    targetPort: redis-server
+  selector:
+    app: redis
+    role: master
