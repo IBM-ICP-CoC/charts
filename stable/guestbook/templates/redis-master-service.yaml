@@ -10,6 +10,7 @@ spec:
   - name: redis-server
     port: {{ .Values.redis.port }}
     targetPort: redis-server
+    protocol: TCP
   selector:
     app: redis
     role: master
