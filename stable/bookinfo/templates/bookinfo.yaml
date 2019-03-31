@@ -46,8 +46,8 @@ spec:
     spec:
       containers:
       - name: details
-        image: {{ .Values.details-v1.image }}
-        imagePullPolicy:  {{ .Values.details-v1.pullPolicy }}
+        image: {{ .Values.detailsv1.image }}
+        imagePullPolicy:  {{ .Values.detailsv1.pullPolicy }}
         ports:
         - containerPort: 9080
 ---
@@ -85,8 +85,8 @@ spec:
     spec:
       containers:
       - name: ratings
-        image: {{ .Values.ratings-v1.image }}
-        imagePullPolicy:  {{ .Values.ratings-v1.pullPolicy }}
+        image: {{ .Values.ratingsv1.image }}
+        imagePullPolicy:  {{ .Values.ratingsv1.pullPolicy }}
         ports:
         - containerPort: 9080
 ---
@@ -124,8 +124,8 @@ spec:
     spec:
       containers:
       - name: reviews
-        image: {{ .Values.reviews-v1.image }}
-        imagePullPolicy:  {{ .Values.ratings-v1.pullPolicy }}
+        image: {{ .Values.reviewsv1.image }}
+        imagePullPolicy:  {{ .Values.ratingsv1.pullPolicy }}
         ports:
         - containerPort: 9080
 ---
@@ -146,8 +146,8 @@ spec:
     spec:
       containers:
       - name: reviews
-        image: {{ .Values.reviews-v2.image }}
-        imagePullPolicy:  {{ .Values.reviews-v2.pullPolicy }}
+        image: {{ .Values.reviewsv2.image }}
+        imagePullPolicy:  {{ .Values.reviewsv2.pullPolicy }}
         ports:
         - containerPort: 9080
 ---
@@ -168,8 +168,8 @@ spec:
     spec:
       containers:
       - name: reviews
-        image: {{ .Values.reviews-v3.image }}
-        imagePullPolicy:  {{ .Values.reviews-v3.pullPolicy }}
+        image: {{ .Values.reviewsv3.image }}
+        imagePullPolicy:  {{ .Values.reviewsv3.pullPolicy }}
         ports:
         - containerPort: 9080
 ---
@@ -207,8 +207,8 @@ spec:
     spec:
       containers:
       - name: productpage
-        image: {{ .Values.productpage-v1.image }}
-        imagePullPolicy:  {{ .Values.productpage-v1.pullPolicy }}
+        image: {{ .Values.productpagev1.image }}
+        imagePullPolicy:  {{ .Values.productpagev1.pullPolicy }}
         ports:
         - containerPort: 9080
 ---
