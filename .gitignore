@@ -1,1 +1,4 @@
 .DS_Store
+stable/cip.yaml
+stable/deploy.yaml
+stable/sa.yaml
