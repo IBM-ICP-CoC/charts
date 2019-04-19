@@ -1,3 +1,3 @@
 A Build engine, configured with plugins to leverage Kubernetes cloud for dynamic worker agents.
 
-The default id/pass is `admin/admin`.
+The default id/pass is 'admin/admin'.

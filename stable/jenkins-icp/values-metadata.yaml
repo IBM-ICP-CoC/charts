@@ -11,3 +11,14 @@ storage:
       type: "boolean"
       immutable: "false"
       required: true
+serviceAccount:
+  __metadata:
+    label: "Service Account"
+  createNewPvc:
+   __metadata:
+      name: "useServiceAccount"
+      label: "Specify the service account name to use when not deployed to default namespace."
+      description: "If you are deploying Jenkis to a namespace other than default, then you need to provide a service account."
+      type: "boolean"
+      immutable: "false"
+      required: true

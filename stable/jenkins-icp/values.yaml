@@ -2,6 +2,9 @@ image:
   repository: ibmicpcoc/jenkins-icp
   tag: latest
   pullPolicy: IfNotPresent
+serviceAccount: 
+  useServiceAccount: false
+  name: jenkins
 service:
   name: jenkins-icp-svc
   type: NodePort

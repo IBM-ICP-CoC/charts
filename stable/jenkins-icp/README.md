@@ -1,7 +1,7 @@
 ![jenkins](https://ibm-icp-coc.github.io/charts/repo/stable/jenkins.png "Jenkins logo")
 # Jenkins for ICP
 
-Package Version: 1.0.1
+Package Version: 1.0.2
 
 A packaging of Jenkins for ICP by the IBM ICP Center of Competency (CoC).  This specific packaging includes all the plugins necessary to leverage the [Kubernetes](https://wiki.jenkins.io/display/JENKINS/Kubernetes+Plugin) cloud for dynamic provisioning of worker nodes to perform individual build tasks.
 
