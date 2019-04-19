@@ -4,7 +4,7 @@ storage:
   __metadata:
     label: "Create new PVC"
   createNewPvc:
-   __metadata:
+    __metadata:
       name: "createNewPvc"
       label: "Create a new PVC for this deployment."
       description: "If enabled a new PVC with the name specified will be created. Otherwise it will assume that one with teh given name is already created and will be used."
@@ -15,7 +15,7 @@ serviceAccount:
   __metadata:
     label: "Service Account"
   createNewPvc:
-   __metadata:
+    __metadata:
       name: "useServiceAccount"
       label: "Specify the service account name to use when not deployed to default namespace."
       description: "If you are deploying Jenkis to a namespace other than default, then you need to provide a service account."
