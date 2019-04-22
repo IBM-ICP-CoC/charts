@@ -1,15 +1,14 @@
 image:
   repository: ibmicpcoc/jenkins-icp
-  tag: latest
+  tag: 1.0.2
   pullPolicy: IfNotPresent
 serviceAccount: 
   useServiceAccount: false
-  name: jenkins
+  name: jenkins-sa
 service:
   name: jenkins-icp-svc
-  type: NodePort
 storage:
   createNewPvc: true
   pvc: jenkins-icp-pvc
   accessMode: ReadWriteOnce
-  size: 5Gi
+  size: 1Gi

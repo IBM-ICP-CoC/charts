@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   bookinfo:
   - apiVersion: v1
-    created: 2019-04-19T18:33:10.123276405-04:00
+    created: 2019-04-22T16:07:51.397073562-04:00
     description: The Istio example application
     digest: 300c8876f80229c049dbafcdf1477c4ae0d60e0feea7e4b2450e89262017fa62
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/bookinfo.png
@@ -18,7 +18,7 @@ entries:
     version: 1.0.1
   guestbook:
   - apiVersion: v1
-    created: 2019-04-19T18:33:10.124125666-04:00
+    created: 2019-04-22T16:07:51.398858907-04:00
     description: A Helm chart to deploy Guestbook three tier web application.
     digest: fe6f3a0235cb2ed8376306be02d792d06bac29773c5259f2fae0e2630dee4be3
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/guestbook.png
@@ -33,26 +33,17 @@ entries:
     version: 0.2.1
   jenkins-icp:
   - apiVersion: v1
-    created: 2019-04-19T18:33:10.125761729-04:00
+    created: 2019-04-22T16:07:51.400576747-04:00
     description: A Helm chart for Jenkins on ICP
-    digest: c03155211c88cf0f9897bcae176016ef2d2186363e46c48b0b0ebe690d3c75a6
+    digest: 84ffc923769d9b673a97c637e313de93db2f5ec5f04a837b5971385abf2063f9
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/jenkins.png
     name: jenkins-icp
     urls:
     - https://ibm-icp-coc.github.io/charts/repo/stable/jenkins-icp-1.0.2.tgz
     version: 1.0.2
-  - apiVersion: v1
-    created: 2019-04-19T18:33:10.125041368-04:00
-    description: A Helm chart for Jenkins on ICP
-    digest: 53ea0ed7c54d19be36ae22546e88a6eed553f9f2ece6b31d4aa27f98f663c550
-    icon: https://ibm-icp-coc.github.io/charts/repo/stable/jenkins.png
-    name: jenkins-icp
-    urls:
-    - https://ibm-icp-coc.github.io/charts/repo/stable/jenkins-icp-1.0.1.tgz
-    version: 1.0.1
   kubetoy:
   - apiVersion: v1
-    created: 2019-04-19T18:33:10.127144524-04:00
+    created: 2019-04-22T16:07:51.403089331-04:00
     description: A simple Node.js application used to explore Kubernetes deployments.
     digest: 8cbf67adb6a6be3700cfce9b5d6e51e0e2a22096659ddff831512a0bbb2d4e7e
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/duck.png
@@ -69,7 +60,7 @@ entries:
     - https://ibm-icp-coc.github.io/charts/repo/stable/kubetoy-1.9.0.tgz
     version: 1.9.0
   - apiVersion: v1
-    created: 2019-04-19T18:33:10.126683737-04:00
+    created: 2019-04-22T16:07:51.402221371-04:00
     description: A simple Node.js application used to explore Kubernetes deployments.
     digest: 7933a9b3ec4dbe331bbd040a868c1710318dbb423db0cfd34338a710abad6104
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/duck.png
@@ -85,7 +76,7 @@ entries:
     - https://ibm-icp-coc.github.io/charts/repo/stable/kubetoy-1.8.1.tgz
     version: 1.8.1
   - apiVersion: v1
-    created: 2019-04-19T18:33:10.126186123-04:00
+    created: 2019-04-22T16:07:51.401379627-04:00
     description: A simple Node.js application used to explore Kubernetes deployments.
     digest: efc1cc9cf6cfba6abaf39b2f924182a447e9547f6caf7effa3a817ecb4f3f4a5
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/duck.png
@@ -95,7 +86,7 @@ entries:
     version: 1.7.1
   medsearch:
   - apiVersion: v1
-    created: 2019-04-19T18:33:10.127914775-04:00
+    created: 2019-04-22T16:07:51.404518384-04:00
     description: A Helm chart for MedSearch on ICP
     digest: 35d430933364c997d7cc94beb22c4996b8ebdd89be3f38fa0fab781e8f3179d5
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/medsearch.png
@@ -105,7 +96,7 @@ entries:
     version: 1.0.0
   sumapp:
   - apiVersion: v1
-    created: 2019-04-19T18:33:10.130374277-04:00
+    created: 2019-04-22T16:07:51.40771235-04:00
     description: A simple stateless Liberty application for adding numbers
     digest: b5d76c0488cb54607522c8368ba59576305c123bfd9db030ce7e82edd797859c
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/sigma.png
@@ -118,4 +109,4 @@ entries:
     urls:
     - https://ibm-icp-coc.github.io/charts/repo/stable/sumapp-1.0.0.tgz
     version: 1.0.0
-generated: 2019-04-19T18:33:10.122447811-04:00
+generated: 2019-04-22T16:07:51.37854609-04:00

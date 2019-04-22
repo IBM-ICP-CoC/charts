@@ -3,61 +3,69 @@
 
 Package Version: 1.0.2
 
-A packaging of Jenkins for ICP by the IBM ICP Center of Competency (CoC).  This specific packaging includes all the plugins necessary to leverage the [Kubernetes](https://wiki.jenkins.io/display/JENKINS/Kubernetes+Plugin) cloud for dynamic provisioning of worker nodes to perform individual build tasks.
+A packaging of Jenkins for ICP by the IBM ICP Center of Competency (CoC).  This specific packaging includes all 
+the plugins necessary to leverage the [Kubernetes](https://wiki.jenkins.io/display/JENKINS/Kubernetes+Plugin) 
+cloud for dynamic provisioning of worker nodes to perform individual build tasks.
 
-This packaging also changes the default user to root (from Jenkins) which prevents any issues of accessing the shared file system.
+This packaging also changes the default user to root (from Jenkins) which prevents any issues of accessing 
+the shared file system.
 
-A default admin user os created with the credentials `admin/admin`.  You should change the admin password as soon as you can.
+A default admin user os created with the credentials `admin/admin`.  You should change the admin password 
+as soon as you can.
   
 ## Configuration
 
 The following tables lists the configurable parameters of the Jenkins chart and their default values.
+image:
+  repository: ibmicpcoc/jenkins-icp
+  tag: 1.0.2
+  pullPolicy: IfNotPresent
+serviceAccount: 
+  useServiceAccount: false
+  name: jenkins-sa
+service:
+  name: jenkins-icp-svc
+storage:
+  createNewPvc: true
+  pvc: jenkins-icp-pvc
+  accessMode: ReadWriteOnce
+  size: 1Gi
 
-|         Parameter          |                       Description                       |           Default            |
-|----------------------------|---------------------------------------------------------|------------------------------|
-| `image.repository`         | The repository and image name                           | `ibmicpcoc/jenkins-icp`      |
-| `image.tag`                | The tag (version) of the image                          | `latest`                     |
-| `image.pullPolilcy`        | The pull policy for images                              | `IfNotPresent`               |
-| `service.name`             | The name of the service resource                        | `jenkins-icp-service`        |
-| `service.type`             | The type of service                                     | `NodePort`                   |
-| `storage.createNewPvc`     | Enabled, indicates that a new PVC is created            | `true`                       |
-| `storage.pvc`              | The persistent volume claim name tp be created          | `jenkins-icp-pvc`            |
-| `storage.accessMode`       | The access mode for persistent storage volume           | `NodePort`                   |
-| `storage.size`             | The size of the persistent volume                       | `5Gi`                        |
 
-Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
+|         Parameter                  |                       Description                       |           Default            |
+|------------------------------------|---------------------------------------------------------|------------------------------|
+| `image.repository`                 | The repository and image name                           | `ibmicpcoc/jenkins-icp`      |
+| `image.tag`                        | The tag (version) of the image                          | `1.0.2`                      |
+| `image.pullPolilcy`                | The pull policy for images                              | `IfNotPresent`               |
+| `serviceAccount.useServiceAccount` | The name of the service resource                        | `false`                      |
+| `serviceAccount.name`              | The name of the service account                         | `jenkins-sa`                 |
+| `storage.createNewPvc`             | Enabled, indicates that a new PVC is created            | `true`                       |
+| `storage.pvc`                      | The persistent volume claim name tp be created          | `jenkins-icp-pvc`            |
+| `storage.accessMode`               | The access mode for persistent storage volume           | `ReadWriteOnce`              |
+| `storage.size`                     | The size of the persistent volume                       | `1Gi`                        |
 
-```bash
-$ helm install --name my-jenkins-release \
-  --set image.pullPolilcy=Always \
-    ibmicpcoc/jenkins-icp
+## Service Account
+
+If Jenkins is deployed in a namespace other than `default`, then you need to provide a Kubernetes ServiceAccount 
+with the roles and permissions necessary to perform the necessary trasks (see 
+[kubernetes service account](https://github.com/jenkinsci/kubernetes-plugin/blob/master/src/main/kubernetes/service-account.yml)).
+
+If you expect to deploy applications to other namespaces than the one Jenkins is deployed into, you will need
+to create a role binding between the service account and the cluster admin role. For example if the service account 
+is called jenkins-sa, then the following clusterrolebinding would accomplish the task.
+
+```
+kubectl create clusterrolebinding default-admin --clusterrole cluster-admin --serviceaccount=jenkins-sa:default
 ```
 
-The above command sets the image pull policy to always.
-
-Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
-
-```bash
-$ helm install --name my-jenkins-release -f values.yaml ibmicpcoc/jenkins-icp
-```
-
-> **Tip**: You can use the default [values.yaml](values.yaml)
 
 ## Persistence
 
-The image stores the Jenkins data and configurations at the `/var/jenkins_home` path of the container.
+The image stores the Jenkins data and configurations at the `/var/jenkins_home` path of the container.  
+The chart mounts a [Persistent Volume](kubernetes.io/docs/user-guide/persistent-volumes/) volume at this 
+location. By default, a PVC is created for you with the name given.  If this already exists then you 
+should un-check the option to create the PVC.
 
-The chart mounts a [Persistent Volume](kubernetes.io/docs/user-guide/persistent-volumes/) volume at this location. By default, 
-a PVC is created for you with the name given.  If this already exists then you should un-check the option to create the PVC.
-
-### Using Existing PersistentVolumeClaims
-
-1. Create the PersistentVolume
-2. Create the PersistentVolumeClaim
-3. Install the chart:
-    ```bash
-    $ helm install --set storage.pvc=PVC_NAME ibmicpcoc/jenkins-icp
-    ```
 
 ## Copyright
-© Copyright IBM Corporation 2018. All Rights Reserved.
+© Copyright IBM Corporation 2019. All Rights Reserved.
