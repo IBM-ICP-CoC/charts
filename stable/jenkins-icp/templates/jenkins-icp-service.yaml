@@ -5,9 +5,9 @@ metadata:
   labels:
     app: {{ template "name" . }}
 spec:
-  type: {{ .Values.service.type }}
+  type: NodePort
   ports:
-  - name: http
+  - name: ui
     port: 80
     targetPort: 8080
     protocol: TCP
