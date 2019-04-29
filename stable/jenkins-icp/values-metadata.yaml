@@ -14,7 +14,7 @@ storage:
 serviceAccount:
   __metadata:
     label: "Service Account"
-  createNewPvc:
+  useServiceAccount:
     __metadata:
       name: "useServiceAccount"
       label: "Specify the service account name to use when not deployed to default namespace."
@@ -23,6 +23,8 @@ serviceAccount:
       immutable: "false"
       required: true
 image:
+  __metadata:
+    label: "Image"
   pullPolicy:
     __metadata:
       name: "pullPolicy"
