@@ -16,20 +16,6 @@ as soon as you can.
 ## Configuration
 
 The following tables lists the configurable parameters of the Jenkins chart and their default values.
-image:
-  repository: ibmicpcoc/jenkins-icp
-  tag: 1.0.2
-  pullPolicy: IfNotPresent
-serviceAccount: 
-  useServiceAccount: false
-  name: jenkins-sa
-service:
-  name: jenkins-icp-svc
-storage:
-  createNewPvc: true
-  pvc: jenkins-icp-pvc
-  accessMode: ReadWriteOnce
-  size: 1Gi
 
 
 |         Parameter                  |                       Description                       |           Default            |
