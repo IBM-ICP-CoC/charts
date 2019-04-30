@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: redis-slave
-        image: kubernetes/redis-slave:v2
+        image: ibmicpcoc/redis-slave:5.0.4
         ports:
         - name: redis-server
           containerPort: {{ .Values.redis.port }}
