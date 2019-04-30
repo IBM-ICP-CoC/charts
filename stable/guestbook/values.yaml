@@ -3,7 +3,7 @@
 replicaCount: 2
 
 guestbook:
-  image: ibmcom/guestbook:v2
+  image: ibmicpcoc/guestbook:v2
   pullPolicy: Always
   service:
     type: NodePort
