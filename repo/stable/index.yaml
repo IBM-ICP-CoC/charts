@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   bookinfo:
   - apiVersion: v1
-    created: 2019-04-29T10:50:03.245036842-04:00
+    created: 2019-04-30T14:55:14.620109031-04:00
     description: The Istio example application
     digest: 300c8876f80229c049dbafcdf1477c4ae0d60e0feea7e4b2450e89262017fa62
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/bookinfo.png
@@ -14,13 +14,14 @@ entries:
     - ICP
     name: bookinfo
     urls:
-    - bookinfo-1.0.1.tgz
+    - https://ibm-icp-coc.github.io/charts/repo/stable/bookinfo-1.0.1.tgz
     version: 1.0.1
   guestbook:
   - apiVersion: v1
-    created: 2019-04-29T10:50:03.246108512-04:00
+    appVersion: 'guestbook: v2, redis: 5.0.4'
+    created: 2019-04-30T14:55:14.62090005-04:00
     description: A Helm chart to deploy Guestbook three tier web application.
-    digest: fe6f3a0235cb2ed8376306be02d792d06bac29773c5259f2fae0e2630dee4be3
+    digest: 46febaa3910ead4840c44efbc83ed8aeba27906da680ff8d6ba660a89540e5b2
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/guestbook.png
     keywords:
     - guestbook
@@ -29,11 +30,11 @@ entries:
     - istio
     name: guestbook
     urls:
-    - https://ibm-icp-coc.github.io/charts/repo/stable/guestbook-0.2.1.tgz
-    version: 0.2.1
+    - https://ibm-icp-coc.github.io/charts/repo/stable/guestbook-2.0.0.tgz
+    version: 2.0.0
   jenkins-icp:
   - apiVersion: v1
-    created: 2019-04-29T10:50:03.246672737-04:00
+    created: 2019-04-30T14:55:14.621428981-04:00
     description: A Helm chart for Jenkins on ICP
     digest: 77d957868fbff71e25c5190234520ee02070525a223ec406c6b54128fab1e7c7
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/jenkins.png
@@ -43,7 +44,7 @@ entries:
     version: 1.0.2
   kubetoy:
   - apiVersion: v1
-    created: 2019-04-29T10:50:03.248249314-04:00
+    created: 2019-04-30T14:55:14.622539909-04:00
     description: A simple Node.js application used to explore Kubernetes deployments.
     digest: 8cbf67adb6a6be3700cfce9b5d6e51e0e2a22096659ddff831512a0bbb2d4e7e
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/duck.png
@@ -60,7 +61,7 @@ entries:
     - https://ibm-icp-coc.github.io/charts/repo/stable/kubetoy-1.9.0.tgz
     version: 1.9.0
   - apiVersion: v1
-    created: 2019-04-29T10:50:03.247546048-04:00
+    created: 2019-04-30T14:55:14.622149145-04:00
     description: A simple Node.js application used to explore Kubernetes deployments.
     digest: 7933a9b3ec4dbe331bbd040a868c1710318dbb423db0cfd34338a710abad6104
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/duck.png
@@ -76,7 +77,7 @@ entries:
     - https://ibm-icp-coc.github.io/charts/repo/stable/kubetoy-1.8.1.tgz
     version: 1.8.1
   - apiVersion: v1
-    created: 2019-04-29T10:50:03.247033352-04:00
+    created: 2019-04-30T14:55:14.62176918-04:00
     description: A simple Node.js application used to explore Kubernetes deployments.
     digest: efc1cc9cf6cfba6abaf39b2f924182a447e9547f6caf7effa3a817ecb4f3f4a5
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/duck.png
@@ -86,7 +87,7 @@ entries:
     version: 1.7.1
   medsearch:
   - apiVersion: v1
-    created: 2019-04-29T10:50:03.248982161-04:00
+    created: 2019-04-30T14:55:14.623212339-04:00
     description: A Helm chart for MedSearch on ICP
     digest: 35d430933364c997d7cc94beb22c4996b8ebdd89be3f38fa0fab781e8f3179d5
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/medsearch.png
@@ -96,7 +97,7 @@ entries:
     version: 1.0.0
   sumapp:
   - apiVersion: v1
-    created: 2019-04-29T10:50:03.251081772-04:00
+    created: 2019-04-30T14:55:14.625083049-04:00
     description: A simple stateless Liberty application for adding numbers
     digest: b5d76c0488cb54607522c8368ba59576305c123bfd9db030ce7e82edd797859c
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/sigma.png
@@ -109,4 +110,4 @@ entries:
     urls:
     - https://ibm-icp-coc.github.io/charts/repo/stable/sumapp-1.0.0.tgz
     version: 1.0.0
-generated: 2019-04-29T10:50:03.244058391-04:00
+generated: 2019-04-30T14:55:14.619390694-04:00
