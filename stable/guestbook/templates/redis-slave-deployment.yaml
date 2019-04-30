@@ -11,11 +11,13 @@ spec:
     matchLabels:
       app: redis
       role: slave
+      version: slave # kiali keys off of this
   template:
     metadata:
       labels:
         app: redis
         role: slave
+        version: slave 
     spec:
       containers:
       - name: redis-slave

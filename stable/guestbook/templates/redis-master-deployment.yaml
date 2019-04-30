@@ -11,11 +11,13 @@ spec:
     matchLabels:
       app: redis
       role: master
+      version: master   # this is what kiali keys off of
   template:
     metadata:
       labels:
         app: redis
         role: master
+        version: master
     spec:
       containers:
       - name: redis-master

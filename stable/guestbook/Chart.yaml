@@ -8,4 +8,4 @@ keywords:
 - multitier
 - redis
 - istio
-appVersion: "guestbook: v2, redis: 5.0.4"
+appVersion: "guestbook: v1, redis: 5.0.4"
