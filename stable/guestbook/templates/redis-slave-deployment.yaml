@@ -19,7 +19,8 @@ spec:
     spec:
       containers:
       - name: redis-slave
-        image: ibmicpcoc/redis-slave:5.0.4
+        image: "{{ .Values.redisSlave.image }}"
+        imagePullPolicy: {{ .Values.redisSlave.pullPolicy }}
         ports:
         - name: redis-server
           containerPort: 6379

@@ -19,7 +19,8 @@ spec:
     spec:
       containers:
       - name: redis-master
-        image: ibmicpcoc/redis:5.0.4
+        image: "{{ .Values.redis.image }}"
+        imagePullPolicy: {{ .Values.redis.pullPolicy }}
         ports:
         - name: redis-server
-          containerPort: {{ .Values.redis.port }}
+          containerPort: 6379

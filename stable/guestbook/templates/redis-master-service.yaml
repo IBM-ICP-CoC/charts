@@ -8,7 +8,7 @@ metadata:
 spec:
   ports:
   - name: redis-server
-    port: {{ .Values.redis.port }}
+    port: 6379
     targetPort: redis-server
     protocol: TCP
   selector:

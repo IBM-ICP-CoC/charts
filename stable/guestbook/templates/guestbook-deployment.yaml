@@ -21,8 +21,8 @@ spec:
     spec:
       containers:
       - name: {{ .Chart.Name }}
-        image: "{{ .Values.image.repository }}"
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        image: "{{ .Values.guestbook.image }}"
+        imagePullPolicy: {{ .Values.guestbook.pullPolicy }}
         ports:
         - name: http-server
-          containerPort: {{ .Values.service.port }}
+          containerPort: 3000

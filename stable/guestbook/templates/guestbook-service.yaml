@@ -8,10 +8,10 @@ metadata:
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
-  type: {{ .Values.service.type }}
+  type: {{ .Values.guestbook.service.type }}
   ports:
   - name: http-server
-    port: {{ .Values.service.port }}
+    port: 3000
     targetPort: http-server
     protocol: TCP
   selector:

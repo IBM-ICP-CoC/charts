@@ -2,11 +2,18 @@
 
 replicaCount: 2
 
-image:
-  repository: ibmcom/guestbook:v2
+guestbook:
+  image: ibmcom/guestbook:v2
+  pullPolicy: Always
+  service:
+    type: NodePort
+
+redis:
+  image: ibmicpcoc/redis:5.0.4
   pullPolicy: Always
 
-service:
-  type: LoadBalancer
-  port: 3000
+redisSlave:
+  image: ibmicpcoc/redis-slave:5.0.4
+  pullPolicy: Always
+
 
