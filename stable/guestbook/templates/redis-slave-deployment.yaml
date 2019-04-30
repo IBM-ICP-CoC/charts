@@ -1,4 +1,3 @@
-{{- if .Values.redis.slaveEnabled -}}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -23,5 +22,5 @@ spec:
         image: ibmicpcoc/redis-slave:5.0.4
         ports:
         - name: redis-server
-          containerPort: {{ .Values.redis.port }}
-{{- end }}
+          containerPort: 6379
+
