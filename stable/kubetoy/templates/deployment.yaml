@@ -75,11 +75,8 @@ metadata:
   name: "{{ .Release.Name }}-kubetoy-pvc"
 spec:
   accessModes:
-    - {{ .Values.storage.accessMode }}
+    - "ReadWriteMany"
   resources:
     requests:
       storage: 1Gi
-# {{ if .Values.storage.useStorageClass  }}
-  storageClassName: {{ .Values.storage.className }}
-# {{ end }}
 # {{ end }}

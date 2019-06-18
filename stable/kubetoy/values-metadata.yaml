@@ -106,37 +106,6 @@ storage:
       type: "boolean"
       immutable: "false"
       required: true
-  useStorageClass:
-    __metadata:
-       name: "useStorageClass"
-       label: "Use dynamic storage class for this persistent volume claim."
-       description: "Enables the use of dynamically provisioned storage based on a storage class."
-       type: "boolean"
-       immutable: "false"
-       required: true
-  createPvc:
-    __metadata:
-      name: "createPvc"
-      label: "Create a new PVC"
-      description: "Will create a new PVC, requesting 1Gi of storage and the specified access mode.  If set to false then it will try to use an existing PVC."
-      type: "boolean"
-      immutable: "false"
-      required: true
-  accessMode:
-     __metadata:
-       name: "accessMode"
-       label: "PVC access mode"
-       description: "ReadWriteOnce, ReadOnlyMany, or ReadWriteMany."
-       type: "string"
-       immutable: false
-       required: true
-       options:
-       - label: "ReadWriteOnce"
-         value: "ReadWriteOnce"
-       - label: "ReadOnlyMany"
-         value: "ReadOnlyMany"
-       - label: "ReadWriteMany"
-         value: "ReadWriteMany"
 image:
   pullPolicy:
     __metadata:

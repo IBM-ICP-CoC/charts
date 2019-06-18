@@ -1,4 +1,4 @@
-# Kubetoy 1.9.0
+# Kubetoy 1.9.1
 
 A Kubernetes Toy Application
 
@@ -36,10 +36,6 @@ The following tables lists the configurable parameters of the Jenkins chart and 
 | `image.pullPolilcy`        | The pull policy for images                              | `IfNotPresent`            |
 | `service.name`              | The name of the service resource                        | `kubetoy-service`        |
 | `storage.useSharedStorage` | Enabled, Indicates that shared storage is used (filesystem tab)            | `false`                    |
-| `storage.createPvc`         | Enabled, Indicates that a new PVC is created            | `false`                    |
-| `storage.useStorageClass`   | Use dynamic provisioning        | `false`             |
-| `storage.storageClassName`   | The name of the storage class to use for dynamic provisioning       | `glusterfs`             |
-| `storage.accessmode`       | The access mode for persistent storage volume           | `ReadWriteMany`                 |
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
 
