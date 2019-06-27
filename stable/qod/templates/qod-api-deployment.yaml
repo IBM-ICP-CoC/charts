@@ -1,0 +1,36 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: {{ template "qod.fullname" . }}-api
+  labels:
+    app: {{ template "qod.name" . }}-api
+    chart: {{ template "qod.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.qodapi.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "qod.name" . }}-api
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "qod.name" . }}-api
+        release: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}-api
+          image: "{{ .Values.qodapi.image.repository }}:{{ .Values.qodapi.image.tag }}"
+          imagePullPolicy: {{ .Values.qodapi.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 3000
+              protocol: TCP
+          env:
+            - name: DB_HOST
+              value: {{ template "qod.fullname" . }}-db
+            - name: DB_USER
+              value: root
+            - name: DB_PASS
+              value: root

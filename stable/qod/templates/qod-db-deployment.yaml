@@ -1,0 +1,30 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: {{ template "qod.fullname" . }}-db
+  labels:
+    app: {{ template "qod.name" . }}-db
+    chart: {{ template "qod.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+    tier: db
+spec:
+  replicas: {{ .Values.qoddb.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "qod.name" . }}-db
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "qod.name" . }}-db
+        release: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.qoddb.image.repository }}:{{ .Values.qoddb.image.tag }}"
+          imagePullPolicy: {{ .Values.qoddb.image.pullPolicy }}
+          ports:
+            - name: mysql
+              containerPort: 3306
+              protocol: TCP

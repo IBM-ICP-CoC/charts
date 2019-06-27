@@ -1,0 +1,171 @@
+
+qoddb:
+  __metadata:
+    label: "Database Tier"
+    description: "Pre-populated MariaDB database."
+  replicaCount:
+    __metadata:
+      label: "Replica Count"
+      description: "Number of database instances. Increasing this makes duplicate copies of the db, not clustering them."
+      type: "string"
+      immutable: "false"
+      required: true
+  image:
+    __metadata:
+      label: "QoD DB Image"
+      description: "The image to pull for the database tier."
+    repository:
+      __metadata:
+        label: "Image name (repository)"
+        description: "The image name (without tag)."
+        type: "string"
+        immutable: false
+        required: true
+    tag:
+      __metadata:
+        label: "Image Tag"
+        description: "Image tag to append to image name."
+        type: "string"
+        immutable: false
+        required: true
+    pullPolicy:
+      __metadata:
+        name: "pullPolicy"
+        label: "Docker image pull policy"
+        description: "Always, Never, or IfNotPresent. Defaults to IfNotPresent"
+        type: "string"
+        immutable: "false"
+        required: true
+        options:
+        - label: "IfNotPresent"
+          value: "IfNotPresent"
+        - label: "Always"
+          value: "Always"
+        - label: "Never"
+          value: "Never"
+  
+qodapi:
+  __metadata:
+    label: "API Tier"
+    description: "REST API for quotes."
+  replicaCount:
+    __metadata:
+      label: "Replica Count"
+      description: "Number of API server instances."
+      type: "string"
+      immutable: "false"
+      required: true
+  image:
+    __metadata:
+      label: "API Image"
+      description: "The image to pull for the api tier."
+    repository:
+      __metadata:
+        label: "Image name (repository)"
+        description: "The image name (without tag)."
+        type: "string"
+        immutable: false
+        required: true
+    tag:
+      __metadata:
+        label: "Image Tag"
+        description: "Image tag to append to image name."
+        type: "string"
+        immutable: false
+        required: true
+    pullPolicy:
+      __metadata:
+        name: "pullPolicy"
+        label: "Docker image pull policy"
+        description: "Always, Never, or IfNotPresent. Defaults to IfNotPresent"
+        type: "string"
+        immutable: "false"
+        required: true
+        options:
+        - label: "IfNotPresent"
+          value: "IfNotPresent"
+        - label: "Always"
+          value: "Always"
+        - label: "Never"
+          value: "Never"
+  service:
+    __metadata:
+      label: "API Service"
+      description: "Service details for API tier"
+    type:
+      __metadata:
+        label: "Type"
+        description: "Service type to create."
+        type: "string"
+        immutable: false
+        required: true    
+    port:
+      __metadata:
+        label: "Port"
+        description: "Port number to use if not NodePort type."
+        type: "string"
+        immutable: false
+        required: true    
+
+qodweb:
+  __metadata:
+    label: "Web Tier"
+    description: "Web interface to Quote of Day Service."
+  replicaCount:
+    __metadata:
+      label: "Replica Count"
+      description: "Number of web server instances."
+      type: "string"
+      immutable: "false"
+      required: true
+  image:
+    __metadata:
+      label: "Web Image"
+      description: "The image to pull for the web tier."
+    repository:
+      __metadata:
+        label: "Image name (repository)"
+        description: "The image name (without tag)."
+        type: "string"
+        immutable: false
+        required: true
+    tag:
+      __metadata:
+        label: "Image Tag"
+        description: "Image tag to append to image name."
+        type: "string"
+        immutable: false
+        required: true
+    pullPolicy:
+      __metadata:
+        name: "pullPolicy"
+        label: "Docker image pull policy"
+        description: "Always, Never, or IfNotPresent. Defaults to IfNotPresent"
+        type: "string"
+        immutable: "false"
+        required: true
+        options:
+        - label: "IfNotPresent"
+          value: "IfNotPresent"
+        - label: "Always"
+          value: "Always"
+        - label: "Never"
+          value: "Never"
+  service:
+    __metadata:
+      label: "Web Service"
+      description: "Service details for web tier"
+    type:
+      __metadata:
+        label: "Type"
+        description: "Service type to create."
+        type: "string"
+        immutable: false
+        required: true    
+    port:
+      __metadata:
+        label: "Port"
+        description: "Port number to use if not NodePort type."
+        type: "string"
+        immutable: false
+        required: true    

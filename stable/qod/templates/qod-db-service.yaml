@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "qod.fullname" . }}-db
+  labels:
+    app: {{ template "qod.name" . }}-db
+    chart: {{ template "qod.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: ClusterIP
+  ports:
+    - name: mysql
+      port: 3306
+      targetPort: mysql
+      protocol: TCP
+      
+  selector:
+    app: {{ template "qod.name" . }}-db
+    release: {{ .Release.Name }}

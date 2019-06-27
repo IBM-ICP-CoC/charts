@@ -1,0 +1,32 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: {{ template "qod.fullname" . }}-web
+  labels:
+    app: {{ template "qod.name" . }}-web
+    chart: {{ template "qod.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.qodweb.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "qod.name" . }}-web
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "qod.name" . }}-web
+        release: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}-web
+          image: "{{ .Values.qodweb.image.repository }}:{{ .Values.qodweb.image.tag }}"
+          imagePullPolicy: {{ .Values.qodweb.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 3001
+              protocol: TCP
+          env:
+            - name: QOD_API_URL
+              value: http://{{ template "qod.fullname" . }}-api:{{ .Values.qodapi.service.port }}
