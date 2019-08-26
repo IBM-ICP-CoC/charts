@@ -44,10 +44,10 @@ metadata:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
-  type: contains
+  type: usesCreated
   source:
-    kind: Application
-    name: {{ template "guestbookapplication.fullname" . }}
+    kind: Deployable
+    name: {{ template "guestbookapplication.fullname" . }}-redismaster
   destination:
     kind: Deployable
     name: {{ template "guestbookapplication.fullname" . }}-redisslave
