@@ -1,0 +1,7 @@
+replicaCount: 1
+
+appInClusterNamespace: default
+
+targetClusterName: "local-cluster"
+
+chartRepoURL: https://raw.githubusercontent.com/ibm-cloud-architecture/kubernetes-multicloud-management/v312/demos/guestbook/chart-packages
