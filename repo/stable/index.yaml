@@ -223,16 +223,6 @@ entries:
     urls:
     - https://ibm-icp-coc.github.io/charts/repo/stable/qod-web-1.0.0.tgz
     version: 1.0.0
-  qodapp:
-  - apiVersion: v1
-    appVersion: "1.0"
-    created: 2020-02-12T16:05:09.477688247-05:00
-    description: A Helm chart for Quote of the Day Application
-    digest: e76560972c9797fad5eb158c478e2b47b5e794748aacb3a02aa36fa77f68a23c
-    name: qodapp
-    urls:
-    - https://ibm-icp-coc.github.io/charts/repo/stable/qodapp-0.1.1.tgz
-    version: 0.1.1
   sumapp:
   - apiVersion: v1
     appVersion: 1.0.0
