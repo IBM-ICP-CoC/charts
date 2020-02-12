@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   bookinfo:
   - apiVersion: v1
-    created: 2020-02-12T16:05:09.467183927-05:00
+    created: 2020-02-12T17:06:45.969178641-05:00
     description: The Istio example application
     digest: 37d9090380575dc6a147bceedf37091819416e31bc25eff7f37973efd03dc81a
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/bookinfo.png
@@ -17,7 +17,7 @@ entries:
     - https://ibm-icp-coc.github.io/charts/repo/stable/bookinfo-1.0.2.tgz
     version: 1.0.2
   - apiVersion: v1
-    created: 2020-02-12T16:05:09.46667955-05:00
+    created: 2020-02-12T17:06:45.96854814-05:00
     description: The Istio example application
     digest: 300c8876f80229c049dbafcdf1477c4ae0d60e0feea7e4b2450e89262017fa62
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/bookinfo.png
@@ -34,7 +34,7 @@ entries:
   guestbook:
   - apiVersion: v1
     appVersion: 'guestbook: v1, redis: 5.0.4'
-    created: 2020-02-12T16:05:09.467956706-05:00
+    created: 2020-02-12T17:06:45.969972194-05:00
     description: A Helm chart to deploy Guestbook three tier web application.
     digest: 13648e54c7cdacd7f1d1f0e9e56e64bf40934570da463350ecfd9e1bc26dd901
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/guestbook.png
@@ -50,7 +50,7 @@ entries:
   guestbook-app:
   - apiVersion: v1
     appVersion: 'guestbook: v2'
-    created: 2020-02-12T16:05:09.468253853-05:00
+    created: 2020-02-12T17:06:45.970301874-05:00
     description: Guestbook Application for Multicloud Management Demos
     digest: 6cea6890fc1de5bd15ff081968d7e47b8b020ad81a6dee00282628ea488773bd
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/guestbook.png
@@ -65,7 +65,7 @@ entries:
     - https://ibm-icp-coc.github.io/charts/repo/stable/guestbook-app-0.3.0.tgz
     version: 0.3.0
   ibm-ace-server-dev:
-  - created: 2020-02-12T16:05:09.471400067-05:00
+  - created: 2020-02-12T17:06:45.972581457-05:00
     description: This helm chart is used by the IBM App Connect Dashboard to deploy
       servers
     digest: 3364782aecbbb91d77ef2dfa5573e628b7bc4ce21bebadbe879ebe297c58e91f
@@ -93,7 +93,7 @@ entries:
   jenkins-icp:
   - apiVersion: v1
     appVersion: 2.176.1
-    created: 2020-02-12T16:05:09.472553595-05:00
+    created: 2020-02-12T17:06:45.973737829-05:00
     description: A Helm chart for Jenkins on ICP
     digest: 55b05a21dad264fe792f51393e48ebc5999686d33109e99a5c2294c8dfad8dc4
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/jenkins.png
@@ -103,7 +103,7 @@ entries:
     version: 1.0.3
   - apiVersion: v1
     appVersion: 2.164.2
-    created: 2020-02-12T16:05:09.471944454-05:00
+    created: 2020-02-12T17:06:45.973178206-05:00
     description: A Helm chart for Jenkins on ICP
     digest: 35ad8bae13ea9d2c1ee760b54991be0ad6e2f5e569fb06a9be40c7bad5b06346
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/jenkins.png
@@ -114,7 +114,7 @@ entries:
   kubetoy:
   - apiVersion: v1
     appVersion: 1.9.1
-    created: 2020-02-12T16:05:09.473671078-05:00
+    created: 2020-02-12T17:06:45.974867189-05:00
     description: A simple Node.js application used to explore Kubernetes deployments.
     digest: a6201a334d23caae39d9860fc07ace40921e6d1bf10676aac443580676d827a1
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/duck.png
@@ -131,7 +131,7 @@ entries:
     - https://ibm-icp-coc.github.io/charts/repo/stable/kubetoy-1.9.1.tgz
     version: 1.9.1
   - apiVersion: v1
-    created: 2020-02-12T16:05:09.473285195-05:00
+    created: 2020-02-12T17:06:45.974477158-05:00
     description: A simple Node.js application used to explore Kubernetes deployments.
     digest: 7933a9b3ec4dbe331bbd040a868c1710318dbb423db0cfd34338a710abad6104
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/duck.png
@@ -147,7 +147,7 @@ entries:
     - https://ibm-icp-coc.github.io/charts/repo/stable/kubetoy-1.8.1.tgz
     version: 1.8.1
   - apiVersion: v1
-    created: 2020-02-12T16:05:09.472898451-05:00
+    created: 2020-02-12T17:06:45.974081762-05:00
     description: A simple Node.js application used to explore Kubernetes deployments.
     digest: efc1cc9cf6cfba6abaf39b2f924182a447e9547f6caf7effa3a817ecb4f3f4a5
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/duck.png
@@ -157,7 +157,7 @@ entries:
     version: 1.7.1
   medsearch:
   - apiVersion: v1
-    created: 2020-02-12T16:05:09.474360593-05:00
+    created: 2020-02-12T17:06:45.975725977-05:00
     description: A Helm chart for MedSearch on ICP
     digest: 35d430933364c997d7cc94beb22c4996b8ebdd89be3f38fa0fab781e8f3179d5
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/medsearch.png
@@ -165,68 +165,20 @@ entries:
     urls:
     - https://ibm-icp-coc.github.io/charts/repo/stable/medsearch-1.0.0.tgz
     version: 1.0.0
-  qod:
-  - apiVersion: v1
-    appVersion: 1.0.0
-    created: 2020-02-12T16:05:09.475371556-05:00
-    description: Quote of the Day application.  A three tiered web app that dishes
-      up a new quote every day from a database of over 70k quotes from famous people.
-    digest: 9da2862991292c16fa52e71c2b6e8031df90fcde296f81439035df0e1a3af121
-    icon: https://ibm-icp-coc.github.io/charts/repo/stable/quote.png
-    keywords:
-    - node.js
-    - web
-    - three tier
-    - mariadb
-    - quotes
-    name: qod
-    urls:
-    - https://ibm-icp-coc.github.io/charts/repo/stable/qod-1.0.0.tgz
-    version: 1.0.0
-  qod-api:
-  - apiVersion: v1
-    appVersion: 1.0.0
-    created: 2020-02-12T16:05:09.475646314-05:00
-    description: Quote of the Day API.
-    digest: 70d2d4c714d0054826ca4bfa35d21b37232c7d9d8249fcbc6b851cda85d286c4
-    name: qod-api
-    urls:
-    - https://ibm-icp-coc.github.io/charts/repo/stable/qod-api-1.0.0.tgz
-    version: 1.0.0
   qod-app:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2020-02-12T16:05:09.476416067-05:00
+    created: 2020-02-12T17:06:45.976605084-05:00
     description: A Helm chart for Quote of the Day
     digest: bbdf774d46c690b75d76d6a8401f532be415dd4b158dfb1a864165fdd446c3a4
     name: qod-app
     urls:
     - https://ibm-icp-coc.github.io/charts/repo/stable/qod-app-0.1.1.tgz
     version: 0.1.1
-  qod-db:
-  - apiVersion: v1
-    appVersion: 1.0.0
-    created: 2020-02-12T16:05:09.476623468-05:00
-    description: MariaDB database of famous people quotes.
-    digest: b872314a444bc05aab4c1280ba12dafc7534e6157eef7240c56635c9af4b2eea
-    name: qod-db
-    urls:
-    - https://ibm-icp-coc.github.io/charts/repo/stable/qod-db-1.0.0.tgz
-    version: 1.0.0
-  qod-web:
-  - apiVersion: v1
-    appVersion: 1.0.0
-    created: 2020-02-12T16:05:09.476815857-05:00
-    description: Quote of the Day web tier
-    digest: 925b20475b52d9ab744dc4ef9581624554956fe4b998dc834cf42fd8172baf0c
-    name: qod-web
-    urls:
-    - https://ibm-icp-coc.github.io/charts/repo/stable/qod-web-1.0.0.tgz
-    version: 1.0.0
   sumapp:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: 2020-02-12T16:05:09.479556655-05:00
+    created: 2020-02-12T17:06:45.978724242-05:00
     description: A simple stateless Liberty application for adding numbers
     digest: e9f4fc5950334bafe6ce026d552f98108ddf1618ac97284aec8cb83c04c039a9
     icon: https://ibm-icp-coc.github.io/charts/repo/stable/sigma.png
@@ -239,4 +191,4 @@ entries:
     urls:
     - https://ibm-icp-coc.github.io/charts/repo/stable/sumapp-1.0.0.tgz
     version: 1.0.0
-generated: 2020-02-12T16:05:09.466017201-05:00
+generated: 2020-02-12T17:06:45.967815925-05:00
